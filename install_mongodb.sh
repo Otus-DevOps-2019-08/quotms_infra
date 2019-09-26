@@ -11,12 +11,6 @@ else
    sudo bash -c 'echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" > /etc/apt/sources.list.d/mongodb-org-3.2.list'
    sudo apt update
    sudo apt install -y mongodb-org
-fi
-
-if pgrep 'mongod'; then 
-   echo "mongod already running"
-   exit 0
-else
    sudo systemctl start mongod
-   sudo systemctl enable mongod
+   sudo systemctl enable mongodp
 fi
