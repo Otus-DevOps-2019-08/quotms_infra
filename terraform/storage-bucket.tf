@@ -10,6 +10,7 @@ module "storage-bucket" {
 
   # Имя поменяйте на другое
   name = "storage-bucket-config"
+  location = var.region
 }
 
 output storage-bucket_url {
