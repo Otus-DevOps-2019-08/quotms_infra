@@ -1,0 +1,19 @@
+{
+  "app": {
+    "hosts": "35.235.41.34"
+  },
+  "db": {
+    "hosts": "35.198.32.41"
+  },
+  "_meta": {
+    "hostvars": {
+      "35.235.41.34": {
+        "host_specific_var": "appserver"
+      },
+      "35.198.32.41": {
+        "host_specific_var": "dbserver"
+      }
+    }
+  }
+}
+
