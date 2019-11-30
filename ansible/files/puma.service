@@ -1,0 +1,18 @@
+[Unit]
+Description=Puma HTTP Server
+After=network.target
+
+
+[Service]
+Type=simple
+
+User=appuser
+Group=appuser
+EnvironmentFile=/home/appuser/app/db_config
+WorkingDirectory=/home/appuser/app
+ExecStart=/usr/local/bin/puma -b tcp://0.0.0.0:8080
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
